@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yuji+Boku&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9f7f5;
+}
+
+/* 汎用 */
+.container {
+  width: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f9f7f5;
+  border: 1px solid;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 4px 60px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.title {
+  position: relative;
+  font-size: 3rem;
+  margin-top: 10px;
+  font-family: "Yuji Boku", serif;
+}
+
+.topMessage h2 {
+  font-size: 0.7rem;
+  width: 310px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.question {
+  color: gray;
+}
+
+.clear {
+  color: #03a9f4;
+}
+
+.typeFormWrapper {
+  border-bottom: 1px solid #121212;
+}
+.typeForm {
+  border: none;
+  outline: none;
+  text-align: center;
+  background: #f9f7f5;
+}
+
+.gaugeWrapper {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 100%;
+}
+.gauge {
+  height: 12px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+span {
+  opacity: 0.7;
+}
+
+.commit {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.timer,
+.type {
+  border: 1px solid #121212;
+}

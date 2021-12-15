@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Games</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="title mb-20">
+                <h1>Typing Game</h1>
+            </div>
+            <div v-if="startFlg!=true" class="topMessage">
+                <h2>
+                    Vue.jsを勉強されている方には聞き馴染みがあるかもしれません。
+                    学習内容を整理するためタイピングゲームを作成してみました。
+                    ぜひ、遊んでみてください！
+                </h2>
+                <button class="button mb-20" @click="start">START</button>
+            </div>
+            <div v-else="startFlg">
+                <div v-text="currentWord" class="question mb-20"></div>
+                <div v-if="current_question_counts == question_counts" class="clear">FINISH!</div>
+                <div class="typeFormWrapper mb-20">
+                    <input v-model="typeBox" type="text" id="typeForm" class="typeForm">
+                </div>
+                <div class="gaugeWrapper mb-20">
+                    <div v-bind:style="styleObject" class="gauge"></div>
+                </div>
+                <button class="button mb-20" @click="stop">STOP</button>
+                <button class="button mb-20" @click="reset">RESET</button>
+                <div v-if="endFlg" class="commit">
+                    <div class="timer mb-20">Timed : {{ m }} : {{ s }} : {{ ms }} </div>
+                    <div class="type mb-20">Typed : {{ totalTyped }}</div>  
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script></script>
+</body>
+</html>
